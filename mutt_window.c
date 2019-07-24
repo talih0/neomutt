@@ -53,6 +53,7 @@ struct MuttWindow *mutt_window_new(void)
 {
   struct MuttWindow *win = mutt_mem_calloc(1, sizeof(struct MuttWindow));
 
+  TAILQ_INIT(&win->children);
   return win;
 }
 
