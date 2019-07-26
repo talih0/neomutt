@@ -290,7 +290,7 @@ static void format_line(FILE *fp, int ismacro, const char *t1, const char *t2, c
   fputs(t1, fp);
 
   /* don't try to press string into one line with less than 40 characters. */
-  bool split = (MuttIndexWindow->cols < 40);
+  bool split = (MuttIndexWindow->state.cols < 40);
   if (split)
   {
     col = 0;
@@ -299,9 +299,10 @@ static void format_line(FILE *fp, int ismacro, const char *t1, const char *t2, c
   }
   else
   {
-    const int col_a =
-        (MuttIndexWindow->cols > 83) ? (MuttIndexWindow->cols - 32) >> 2 : 12;
-    col_b = (MuttIndexWindow->cols > 49) ? (MuttIndexWindow->cols - 10) >> 1 : 19;
+    const int col_a = (MuttIndexWindow->state.cols > 83) ?
+                          (MuttIndexWindow->state.cols - 32) >> 2 :
+                          12;
+    col_b = (MuttIndexWindow->state.cols > 49) ? (MuttIndexWindow->state.cols - 10) >> 1 : 19;
     col = pad(fp, mutt_strwidth(t1), col_a);
   }
 
@@ -335,7 +336,7 @@ static void format_line(FILE *fp, int ismacro, const char *t1, const char *t2, c
   {
     while (*t3)
     {
-      int n = MuttIndexWindow->cols - col;
+      int n = MuttIndexWindow->state.cols - col;
 
       if (ismacro >= 0)
       {
@@ -354,7 +355,7 @@ static void format_line(FILE *fp, int ismacro, const char *t1, const char *t2, c
         }
         else
         {
-          n += col - MuttIndexWindow->cols;
+          n += col - MuttIndexWindow->state.cols;
           if (C_Markers)
             n++;
         }
