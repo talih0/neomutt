@@ -2280,6 +2280,9 @@ int mutt_pager(const char *banner, const char *fname, PagerFlags flags, struct P
   }
   unlink(fname);
 
+  MuttPagerWindow->parent->visible = true;
+  mutt_window_reflow();
+
   /* Initialize variables */
 
   if (Context && IsEmail(extra) && !extra->email->read)
@@ -3579,6 +3582,9 @@ int mutt_pager(const char *banner, const char *fname, PagerFlags flags, struct P
   mutt_menu_free(&rd.menu);
 
   mutt_buffer_dealloc(&helpstr);
+
+  MuttPagerWindow->parent->visible = false;
+  mutt_window_reflow();
 
   return (rc != -1) ? rc : 0;
 }
