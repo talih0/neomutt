@@ -36,17 +36,19 @@ extern short C_TimeInc;
  */
 struct Progress
 {
+  char msg[1024];
   unsigned short inc;
   unsigned short flags;
-  const char *msg;
   long pos;
   size_t size;
-  unsigned int timestamp;
   char sizestr[128];
+  unsigned int timestamp;
 };
 
-void mutt_progress_init(struct Progress *progress, const char *msg,
-                        unsigned short flags, unsigned short inc, size_t size);
+void mutt_progress_init(struct Progress *progress, unsigned short flags,
+                        unsigned short inc, size_t size);
+void mutt_progress_set_msg(struct Progress *progress, const char *msg);
+void mutt_progress_set_msg_fmt(struct Progress *progress, const char * restrict fmt, ...);
 void mutt_progress_update(struct Progress *progress, long pos, int percent);
 
 #endif /* MUTT_PROGRESS_H */

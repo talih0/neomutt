@@ -107,13 +107,12 @@ static void message_bar(int percent, const char *fmt, ...)
 /**
  * mutt_progress_init - Set up a progress bar
  * @param progress Progress bar
- * @param msg      Message to display
  * @param flags    Flags, e.g. #MUTT_PROGRESS_SIZE
  * @param inc      Increments to display (0 disables updates)
  * @param size     Total size of expected file / traffic
  */
-void mutt_progress_init(struct Progress *progress, const char *msg,
-                        unsigned short flags, unsigned short inc, size_t size)
+void mutt_progress_init(struct Progress *progress, unsigned short flags,
+                        unsigned short inc, size_t size)
 {
   if (!progress)
     return;
@@ -122,11 +121,11 @@ void mutt_progress_init(struct Progress *progress, const char *msg,
 
   struct timeval tv = { 0, 0 };
 
-  memset(progress, 0, sizeof(struct Progress));
   progress->inc = inc;
   progress->flags = flags;
-  progress->msg = msg;
+  progress->pos = 0;
   progress->size = size;
+  progress->sizestr[0] = '\0';
   if (progress->size != 0)
   {
     if (progress->flags & MUTT_PROGRESS_SIZE)
@@ -140,9 +139,9 @@ void mutt_progress_init(struct Progress *progress, const char *msg,
   if (inc == 0)
   {
     if (size != 0)
-      mutt_message("%s (%s)", msg, progress->sizestr);
+      mutt_message("%s (%s)", progress->msg, progress->sizestr);
     else
-      mutt_message(msg);
+      mutt_message(progress->msg);
     return;
   }
   if (gettimeofday(&tv, NULL) < 0)
@@ -154,6 +153,39 @@ void mutt_progress_init(struct Progress *progress, const char *msg,
         ((unsigned int) tv.tv_sec * 1000) + (unsigned int) (tv.tv_usec / 1000);
   }
   mutt_progress_update(progress, 0, 0);
+}
+
+/**
+ * mutt_progress_set_msg - Set the message of the progress bar
+ * @param progress Progress bar
+ * @param msg      Message
+ */
+void mutt_progress_set_msg(struct Progress *progress, const char *msg)
+{
+  if (!progress)
+    return;
+  mutt_str_strfcpy(progress->msg, msg, sizeof(progress->msg));
+}
+
+/**
+ * mutt_progress_set_msg_fmt - Set the message of the progress bar, using a
+ * printf-like format string
+ * @param progress Progress bar
+ * @param fmt      Printf-like format string
+ * @param ...      Additional parameters for the format string
+ */
+void mutt_progress_set_msg_fmt(struct Progress *progress, const char * restrict fmt, ...)
+{
+  if (!progress)
+    return;
+
+  if (!fmt)
+    progress->msg[0] = '\0';
+
+  va_list ap;
+  va_start(ap, fmt);
+  vsnprintf(progress->msg, sizeof(progress->msg), fmt, ap);
+  va_end(ap);
 }
 
 /**

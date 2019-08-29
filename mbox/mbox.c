@@ -212,9 +212,8 @@ static int mmdf_parse_mailbox(struct Mailbox *m)
 
   if (!m->quiet)
   {
-    char msgbuf[256];
-    snprintf(msgbuf, sizeof(msgbuf), _("Reading %s..."), mailbox_path(m));
-    mutt_progress_init(&progress, msgbuf, MUTT_PROGRESS_MSG, C_ReadInc, 0);
+    mutt_progress_set_msg_fmt(&progress, _("Reading %s..."), mailbox_path(m));
+    mutt_progress_init(&progress, MUTT_PROGRESS_MSG, C_ReadInc, 0);
   }
 
   while (true)
@@ -378,9 +377,8 @@ static int mbox_parse_mailbox(struct Mailbox *m)
 
   if (!m->quiet)
   {
-    char msgbuf[256];
-    snprintf(msgbuf, sizeof(msgbuf), _("Reading %s..."), mailbox_path(m));
-    mutt_progress_init(&progress, msgbuf, MUTT_PROGRESS_MSG, C_ReadInc, 0);
+    mutt_progress_set_msg_fmt(&progress, _("Reading %s..."), mailbox_path(m));
+    mutt_progress_init(&progress, MUTT_PROGRESS_MSG, C_ReadInc, 0);
   }
 
   if (!m->emails)
@@ -1130,7 +1128,6 @@ static int mbox_mbox_sync(struct Mailbox *m, int *index_hint)
   struct MUpdate *old_offset = NULL;
   FILE *fp = NULL;
   struct Progress progress;
-  char msgbuf[PATH_MAX + 64];
 
   /* sort message by their position in the mailbox on disk */
   if (C_Sort != SORT_ORDER)
@@ -1224,8 +1221,8 @@ static int mbox_mbox_sync(struct Mailbox *m, int *index_hint)
 
   if (!m->quiet)
   {
-    snprintf(msgbuf, sizeof(msgbuf), _("Writing %s..."), mailbox_path(m));
-    mutt_progress_init(&progress, msgbuf, MUTT_PROGRESS_MSG, C_WriteInc, m->msg_count);
+    mutt_progress_set_msg_fmt(&progress, _("Writing %s..."), mailbox_path(m));
+    mutt_progress_init(&progress, MUTT_PROGRESS_MSG, C_WriteInc, m->msg_count);
   }
 
   for (i = first, j = 0; i < m->msg_count; i++)

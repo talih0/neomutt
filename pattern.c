@@ -2452,8 +2452,8 @@ int mutt_pattern_func(int op, char *prompt)
     goto bail;
 #endif
 
-  mutt_progress_init(&progress, _("Executing command on matching messages..."),
-                     MUTT_PROGRESS_MSG, C_ReadInc,
+  mutt_progress_set_msg(&progress, _("Executing command on matching messages..."));
+  mutt_progress_init(&progress, MUTT_PROGRESS_MSG, C_ReadInc,
                      (op == MUTT_LIMIT) ? Context->mailbox->msg_count :
                                           Context->mailbox->vcount);
 
@@ -2628,8 +2628,8 @@ int mutt_search_command(int cur, int op)
   if (op == OP_SEARCH_OPPOSITE)
     incr = -incr;
 
-  mutt_progress_init(&progress, _("Searching..."), MUTT_PROGRESS_MSG, C_ReadInc,
-                     Context->mailbox->vcount);
+  mutt_progress_set_msg(&progress, _("Searching..."));
+  mutt_progress_init(&progress, MUTT_PROGRESS_MSG, C_ReadInc, Context->mailbox->vcount);
 
   for (int i = cur + incr, j = 0; j != Context->mailbox->vcount; j++)
   {
