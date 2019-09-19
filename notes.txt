@@ -1,0 +1,15 @@
+Commits (2320):
+	NeoMutt: 1993
+		1200 Richard Russon (@flatcap)
+		 264 Pietro Cerutti (@gahr)
+		 103 Mehdi Abaakouk (@sileht)
+		  50 Austin Ray (@austin-ray)
+	Upstream: 328
+		 284 Kevin McCarthy
+		  13 Vincent Lefevre
+
+	clang-format: 26
+	iwyu: 8
+
+	translate: 111
+

@@ -1,0 +1,20 @@
+TESTING
+
+acutest
+
+Before 9 functions
+After 378 functions
+
+libconfig: 100% coverage
+
+Num functions (tested/total)
+address 39/41
+core    0/18
+email   68/70
+mutt    254/280
+some are dummy functions!
+
+- Naveen Nathan (@nnathan)
+- Pietro Cerutti (@gahr)
+- Vladimir Zakharov (@z2v)
+

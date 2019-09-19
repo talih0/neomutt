@@ -1,0 +1,81 @@
+New Config:
+	attach_save_dir
+	attach_save_without_prompting
+	autocrypt
+	autocrypt_acct_format
+	autocrypt_dir
+	autocrypt_reply
+	auto_subscribe
+	crypt_chars
+	crypt_protected_headers_read
+	crypt_protected_headers_save
+	crypt_protected_headers_subject
+	crypt_protected_headers_write
+	external_search_command
+	fcc_before_send
+	forward_attachments
+	imap_condstore
+	imap_fetch_chunk_size
+	imap_oauth_refresh_command
+	imap_qresync
+	imap_rfc5161
+	include_encrypted
+	nm_flagged_tag
+	nm_replied_tag
+	pop_oauth_refresh_command
+	sidebar_non_empty_mailbox_only
+	size_show_bytes
+	size_show_fractions
+	size_show_mb
+	size_units_on_left
+	smtp_oauth_refresh_command
+	ssl_use_tlsv1_3
+
+Changed config:
+	pgp_use_gpg_agent: false    -> true
+	shell:             ""       -> "/bin/sh"
+	ssl_force_tls:     false    -> true
+	ssl_use_tlsv1:     true     -> false
+	ssl_use_tlsv1_1:   true     -> false
+	to_chars:          " +TCFL" -> " +TCFLR"
+	user_agent:        true     -> false
+	folder_format:
+		"%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %f"
+		"%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
+	status_format:
+		"-%r-NeoMutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
+		"-%r-NeoMutt: %D [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---"
+
+Slist (internally)
+	hidden_tags
+	imap_authenticators
+	mailcap_path
+	pop_authenticators
+	preferred_languages
+	smtp_authenticators
+
+New Commands:
+	index-format-hook
+	named-mailboxes
+	unbind
+	unmacro
+
+New Functions:
+	autocrypt-acct-menu
+	autocrypt-menu
+	compose-to-sender
+	create-account
+	delete-account
+	descend-directory
+	group-chat-reply
+	mailbox-cycle
+	mailbox-list
+	toggle-active
+	toggle-prefer-encrypt
+	toggle-write
+	vfolder-from-query-readonly
+
+Files:
+	Before: 266
+	After:  368
+

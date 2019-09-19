@@ -1,0 +1,16 @@
+Avoid using c++ reserved identifiers - catch, class, delete, new, not, or, public, template, this, try, virtual
+Replace mutt_str_strncmp/mutt_str_strncasecmp with mutt_str_startswith
+Refactor functions to use Buffer, rather than buf,buflen
+Refactor functions to use BufferPool, rather than alloc,free Buffer
+Refactor regex with custom wrapper
+Kill Buffy, Mailbox ftw
+Refactor functions to use Mailbox, rather than global Context
+Refactor Address to use TAILQ
+Refactor GroupList to use TAILQ
+Refactor ReplaceList, RegexList to use TAILQ
+Refactor Mailbox->realpath to be const char *
+factor out mx_update_context() - use notifications instead
+Refactor backends to use Account
+imap: refactor status functions
+notmuch refactoring
+Use symbolic log levels, LL_DEBUG1

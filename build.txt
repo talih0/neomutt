@@ -1,0 +1,4 @@
+2 Years of Autosetup
+3 Years of TravisCI
+Sort Makefile lists
+Optionally use pkg-config for 3rd party dependencies

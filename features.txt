@@ -1,0 +1,18 @@
+Features:
+
+Add $fcc_before_send, defaulting unset
+Deprecate TLS 1.0 and 1.1 by default
+Turn on $ssl_force_tls by default
+-z and -Z options to work with IMAP
+Add size display configuration variables
+Summary pages: version, set, set all, bind, macro
+CONDSTORE and QRESYNC
+OAUTHBEARER
+inotify
+add index-format-hook
+Add $auto_subscribe variable
+Allow relative date hour/min/sec offsets
+Add attributes support on color declarations
+Style Menu Options
+Add new pattern type ~I for external searches
+add <named-mailboxes> command

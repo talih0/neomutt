@@ -1,0 +1,19 @@
+Old:
+	libconn.a
+	libimap.a
+	libmutt.a
+	libncrypt.a
+
+New:
+	libaddress.a
+	libautocrypt.a
+	libconfig.a
+	libcore.a
+	libemail.a
+	libhcache.a
+	libmaildir.a
+	libmbox.a
+	libnntp.a
+	libnotmuch.a
+	libpop.a
+

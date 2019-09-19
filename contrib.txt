@@ -1,0 +1,151 @@
+Contributors: 43
+
+Regular:
+	Austin Ray (@austin-ray)
+	Bertram Scharpf (@bertramscharpf)
+	Bo Yu (@yuzibo)
+	Chris Czettel (@christopher-john-czettel)
+	Darshit Shah (@darnir)
+	Edward Betts (@edwardbetts)
+	Federico Kircheis (@fekir)
+	Ian Zimmerman (@nobrowser)
+	Jakub Jindra (@jindraj)
+	Jenya Sovetkin (@esovetkin)
+	Joey Pabalinas (@alyptik)
+	Karel Zak (@karelzak)
+	Marco Sirabella (@mjsir911)
+	Mehdi Abaakouk (@sileht)
+	Pietro Cerutti (@gahr)
+	Roger Pau Monne (@royger)
+	Tobias Angele (@toogley)
+	Vladimir Zakharov (@z2v)
+	Zero King (@l2dy)
+
+New:
+	Alvaro Herrera (@alvherre)
+	Alyssa Ross (@alyssais)
+	Andres Freund (@anarazel)
+	Antoine Amarilli (@a3nm)
+	Christian Storm (@stormc)
+	Dapeng Gao (@dpgao)
+	David Harrigan (@dharrigan)
+	Doron Behar (@doronbehar)
+	Florian Wehner (@whnr)
+	Frederick Eaton (@archenemies)
+	Josh Poimboeuf (@jpoimboe)
+	Mark Stenglein (@ocelotsloth)
+	Naveen Nathan (@nnathan)
+	Pablo Ovelleiro Corral (@binaryplease)
+	ryt (@0x747972)
+	Scott Kostyshak (@scottkosty)
+	Sebastian Stark (@sstark)
+	Simon Symeonidis (@psyomn)
+	Stefano Zacchiroli (@zacchiro)
+	Stéphane Lesimple (@speed47)
+	Thomas Jarosch (@thomasjfox)
+	Tobias Stoeckmann (@stoeckmann)
+	Victor Fernandes (@ghikio)
+	x3nb(@x3nb63)
+
+3rd Party:
+	Autosetup - Steve Bennett (@msteveb)
+	Acutest - Martin Mitáš (@mity)
+
+Historic:
+	Adam Borowski
+	Ahmed El Gabri
+	Alad Wenter
+	Aleksa Sarai
+	Alex Pearce
+	Alexandre Simon
+	Alok Singh
+	Andreas Rammhold
+	André Berger
+	Anton Rieger
+	Antonio Radici
+	Benjamin Mako Hill
+	Bernard Pratz
+	Bletchley Park
+	Bryan Bennett
+	Christian Dröge
+	Cinder88
+	Clemens Lang
+	Damien Riegel
+	David Sterba
+	Doug Stone-Weaver
+	El Acheche ANIS
+	Elimar Riesebieter
+	Fabian Groffen
+	Fabrice Bellet
+	Florian Klink
+	Floyd Anderson
+	František Hájik
+	Guillaume Brogi
+	Hugo Barrera
+	Ismaël Bouya
+	Ivan J
+	Ivan Tham
+	Jack Stratton
+	Jakub Wilk
+	James McCoy
+	Jelle van der Waa
+	JerikoOne
+	Johannes Frankenau
+	Johannes Weißl
+	John Swinbank
+	Jonathan Perkin
+	Joshua Jordi
+	Joshua Root
+	Julian Andres Klode
+	Kevin Decherf
+	Kevin Velghe
+	Larry Rosenman
+	Lars Kellogg-Stedman
+	Leo Lundgren
+	Leonardo Schenkel
+	Leonidas Spyropoulos
+	Manos Pitsidianakis
+	Marcin Rajner
+	Marius Gedminas
+	Mateusz Piotrowski
+	Michael Bazzinotti
+	ng0
+	Nicolas Bock
+	Olaf Lessenich
+	parazyd
+	Perry Thompson
+	Peter Hogg
+	Peter Lewis
+	Phil Pennock
+	Philipp Marek
+	Pierre-Elliott Bécue
+	r3lgar
+	Regid Ichira
+	Reis Radomil
+	Riad Wahby
+	Richard Hartmann
+	Rubén Llorente
+	Santiago Torres
+	Serge Gebhardt
+	sharktamer
+	Shi Lee
+	Somini
+	Stefan Assmann
+	Stefan Bühler
+	Stephen Gilles
+	Steven Ragnarök
+	Stuart Henderson
+	Telshock
+	Theo Jepsen
+	Thiago Costa de Paiva
+	Thomas Adam
+	Thomas Klausner
+	Thomas Schneider
+	Werner Fink
+	Wieland Hoffmann
+	Will Curry
+	William Pettersson
+	xunam
+	Yoshiki Vázquez Baeza
+	Yubin Ruan
+

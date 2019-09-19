@@ -1,0 +1,5 @@
+Add a manual section on OpenPGP and S/MIME configuration.
+Add a quick-starter config section to the manual.
+Add documentation for the autocrypt feature
+Add "Message Composition Flow" section to manual
+Add some brief documentation on OAUTH support
