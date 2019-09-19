@@ -1,0 +1,62 @@
+NeoMutt 0000-00-00
+
+## Notes
+
+- XXX
+  - YYY
+- ZZZ
+
+## Thanks
+
+Many thanks to our **new contributors**:
+
+- First Last (@nick)
+
+and our **regular contributors**:
+
+- First Last (@nick)
+
+## Features
+
+- description
+
+## Contrib
+
+- description
+
+## Bug Fixes
+
+- description
+
+## Translations
+
+- description
+
+## Coverity defects
+
+- description
+
+## Docs
+
+- description
+
+## Website
+
+- description
+
+## Build
+
+- description
+
+## Code
+
+- description
+
+## Tidy
+
+- description
+
+## Upstream
+
+- description
+
