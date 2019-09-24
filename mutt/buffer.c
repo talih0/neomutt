@@ -405,10 +405,10 @@ void mutt_buffer_concatn_path(struct Buffer *buf, const char *dir,
                               size_t dirlen, const char *fname, size_t fnamelen)
 {
   mutt_buffer_reset(buf);
-  if (dirlen)
+  if (dirlen != 0)
     mutt_buffer_addstr_n(buf, dir, dirlen);
-  if (dirlen && fnamelen)
+  if ((dirlen != 0) && (fnamelen != 0))
     mutt_buffer_addch(buf, '/');
-  if (fnamelen)
+  if (fnamelen != 0)
     mutt_buffer_addstr_n(buf, fname, fnamelen);
 }
