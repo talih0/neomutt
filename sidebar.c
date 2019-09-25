@@ -841,7 +841,7 @@ static void draw_sidebar(int num_rows, int num_cols, int div_width)
     }
     else if (entryidx == HilIndex)
       SET_COLOR(MT_COLOR_HIGHLIGHT);
-    else if ((m->msg_unread > 0) || (m->has_new))
+    else if (m->has_new)
       SET_COLOR(MT_COLOR_NEW);
     else if (m->msg_flagged > 0)
       SET_COLOR(MT_COLOR_FLAGGED);
