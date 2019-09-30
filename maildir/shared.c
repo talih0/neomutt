@@ -972,6 +972,7 @@ int md_commit_message(struct Mailbox *m, struct Message *msg, struct Email *e)
   char subdir[4];
   char suffix[16];
   int rc = 0;
+  int time_ms;
 
   if (mutt_file_fsync_close(&msg->fp))
   {
@@ -995,8 +996,9 @@ int md_commit_message(struct Mailbox *m, struct Message *msg, struct Email *e)
   struct Buffer *full = mutt_buffer_pool_get();
   while (true)
   {
-    mutt_buffer_printf(path, "%s/%lld.R%" PRIu64 ".%s%s", subdir,
-                       (long long) mutt_date_epoch(), mutt_rand64(),
+    time_ms = mutt_date_epoch_ms();
+    mutt_buffer_printf(path, "%s/%lld.%d.R%" PRIu64 ".%s%s", subdir,
+                       (long long) (time_ms / 1000), time_ms % 1000, mutt_rand64(),
                        NONULL(ShortHostname), suffix);
     mutt_buffer_printf(full, "%s/%s", mailbox_path(m), mutt_b2s(path));
 
