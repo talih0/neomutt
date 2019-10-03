@@ -579,7 +579,7 @@ int maildir_msg_open_new(struct Mailbox *m, struct Message *msg, struct Email *e
   char path[PATH_MAX];
   char suffix[16];
   char subdir[16];
-  int time_ms;
+  uint64_t time_ms;
 
   if (e)
   {
@@ -602,8 +602,8 @@ int maildir_msg_open_new(struct Mailbox *m, struct Message *msg, struct Email *e
   while (true)
   {
     time_ms = mutt_date_epoch_ms();
-    snprintf(path, sizeof(path), "%s/tmp/%s.%lld.%d.R%" PRIu64 ".%s%s",
-             mailbox_path(m), subdir, (long long) (time_ms / 1000), time_ms % 1000,
+    snprintf(path, sizeof(path), "%s/tmp/%s.%" PRIu64 ".%" PRIu64".R%" PRIu64 ".%s%s",
+             mailbox_path(m), subdir, time_ms / 1000, time_ms % 1000,
              mutt_rand64(), NONULL(ShortHostname), suffix);
 
     mutt_debug(LL_DEBUG2, "Trying %s\n", path);
