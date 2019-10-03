@@ -30,6 +30,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/time.h>
@@ -416,7 +417,7 @@ time_t mutt_date_epoch(void)
  * mutt_date_epoch_ms - Return the number of milliseconds since the Unix epoch
  * @retval ms The number of ms since the Unix epoch, or 0 on failure
  */
-size_t mutt_date_epoch_ms(void)
+uint64_t mutt_date_epoch_ms(void)
 {
   struct timeval tv = { 0, 0 };
   gettimeofday(&tv, NULL);
